@@ -1,0 +1,85 @@
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  overflow-y: hidden;
+}
+
+#one-a {
+  grid-column: 1;
+  grid-row: 1;
+  height: 50px;
+  width: 50px;
+  background-color: #ffff7d;
+  transition-duration: 0.5s;
+  color: #301934;
+  text-align: center;
+}
+
+#one-a:hover {
+  background-color: #301934;
+  color: #ffff7d;
+}
+
+#one-b {
+  grid-column: 1;
+  grid-row: 2;
+  height: 70px;
+  width: 100px;
+  transition-duration: 1s;
+  background-color: crimson;
+  margin-left: 100%;
+}
+#one-b:hover {
+  transform: translate(-60px, -100px);
+}
+
+#two {
+  grid-column: 2;
+}
+#two > table,
+th,
+td {
+  border: 2px solid black;
+}
+
+#two > table {
+  width: 100%;
+}
+
+@keyframes asd {
+  from {
+    right: 0%;
+    top: 0%;
+  }
+  to {
+    top: 100%;
+    right: 0%;
+  }
+}
+
+#bonus {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 0px;
+  right: 0px;
+  background-color: darkblue;
+  animation-name: asd;
+  animation-duration: 3s;
+  animation-iteration-count: 20;
+  animation-fill-mode: backwards;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  #two > table {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #two > table {
+    width: 40%;
+  }
+}
